@@ -1,0 +1,33 @@
+.not-fount {
+  font-family: 'Courgette', cursive;
+  margin: 0 auto;
+  width: 1000px;
+  .wrapper {
+    margin-top: 50px;
+    h1 {
+      font-size: 200px;
+      color: #8f8e8c;
+      text-align: center;
+      margin-bottom: 1px;
+      text-shadow: 1px 1px 6px #fff;
+    }
+    p {
+      color: rgb(228, 146, 162);
+      font-size: 20px;
+      margin-top: 1px;
+      text-align: center;
+      span {
+        color: lightgreen;
+      }
+    }
+    .sub a {
+      color: white;
+      background: #8f8e8c;
+      text-decoration: none;
+      padding: 7px 120px;
+      font-size: 13px;
+      font-family: arial, serif;
+      font-weight: bold;
+    }
+  }
+}

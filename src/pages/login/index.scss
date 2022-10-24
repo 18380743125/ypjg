@@ -1,0 +1,32 @@
+.login {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: center/cover url('~@/assets/images/login.png');
+  .wrapper {
+    width: 420px;
+    height: 344px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .08);
+    .title {
+      color: #1890ff;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-family:monospace;
+      padding-bottom: 16px;
+    }
+    .form {
+      position: relative;
+      .login-btn {
+        padding: 20px 0;
+      }
+    }
+  }
+  
+}

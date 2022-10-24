@@ -1,0 +1,76 @@
+.ant-layout {
+  height: 100vh;
+  // 头部区域
+  .ant-layout-header {
+    padding-left: 14px;
+    height: 80px;
+    background-color: #1890ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    .title {
+      font-size: 15px;
+    }
+    .user-info {
+      width: 380px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      .welcome {
+        padding-left: 10px;
+      }
+      .setting {
+        position: absolute;
+        right: 30px;
+        width: 100px;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+  .ant-layout {
+    // 侧边栏
+    .ant-layout-sider {
+      // 隐藏滚动条
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      background-color: #fff;
+      z-index: 1;
+    }
+    // 内容区域
+    .ant-layout-content {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      height: 100%;
+      width: 100%;
+      color: #262626;
+      position: relative;
+      .breadcrumb {
+        position: fixed;
+        padding: 10px;
+        margin: 0 0 6px 6px;
+        width: 100%;
+        z-index: 99;
+        background: #fff;
+      }
+      .main {
+        margin-top: 46px;
+        padding-left: 6px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
