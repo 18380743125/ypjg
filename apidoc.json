@@ -1,0 +1,11 @@
+{
+  "name": "益品佳果",
+  "description": "接口文档",
+  "version": "0.1.0",
+  "url": "http://localhost:9090",
+  "sampleUrl": "http://localhost:9090",
+  "template": {
+    "showRequiredLabels": true,
+    "withCompare": true
+  }
+}
