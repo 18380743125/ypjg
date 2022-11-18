@@ -14,8 +14,8 @@ import {
 import CartMini from '@/components/cart-mini'
 import YPNavBar from '@/components/nav-bar'
 import { useStore } from '@/store'
-import { getUser } from '@/api/base'
-import { handleOrder } from '@/api/order'
+import { getUser } from '@/service/modules/user'
+import { handleOrder } from '@/service/modules/order'
 import { setItem } from '@/utils'
 import './index.less'
 

@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react'
 import { Modal, Form, Input, Cascader, Button, Toast } from 'antd-mobile'
 import { pcaOptions } from '@/utils'
-import { updateProfile } from '@/api/base'
+import { updateProfile } from '@/service/modules/user'
 
 type Props = {
   profile: Record<string, any>

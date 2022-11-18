@@ -4,7 +4,7 @@ import { Form, Button, Input, Toast, Checkbox } from 'antd-mobile'
 import Cookies from 'js-cookie'
 
 import YPNavBar from '@/components/nav-bar'
-import { login } from '@/api/base'
+import { login } from '@/service/modules/user'
 import './index.less'
 
 const Login = memo(() => {
@@ -45,7 +45,7 @@ const Login = memo(() => {
   // 返回
   const goBack = () => navigate(-1)
   return (
-    <div className="login">
+    <div className="login full-screen">
       {/* 导航栏 */}
       <YPNavBar onBack={goBack} title="登录" />
       <div className="welcome">
@@ -64,14 +64,16 @@ const Login = memo(() => {
           remember: accountObj ? true : false,
           uname: accountObj?.uname,
           pwd: accountObj?.pwd,
-        }}>
+        }}
+      >
         <Form.Item
           name="uname"
           label="用户名"
           rules={[
             { required: true, message: '用户名不能为空' },
             { max: 20, message: '用户名不能超过20个字符' },
-          ]}>
+          ]}
+        >
           <Input placeholder="请输入用户名" clearable />
         </Form.Item>
         <Form.Item
@@ -80,7 +82,8 @@ const Login = memo(() => {
           rules={[
             { required: true, message: '密码不能为空' },
             { min: 6, max: 18, message: '密码长度在6~18个字符之间' },
-          ]}>
+          ]}
+        >
           <Input
             autoComplete=""
             type="password"
@@ -96,7 +99,8 @@ const Login = memo(() => {
               zIndex: 1,
               right: '20px',
               top: '14px',
-            }}>
+            }}
+          >
             <img
               ref={captchaRef}
               onClick={switchCaptcha}
@@ -111,7 +115,8 @@ const Login = memo(() => {
             rules={[
               { required: true, message: '验证码不能为空' },
               { max: 4, message: '验证码不能超过4位' },
-            ]}>
+            ]}
+          >
             <Input placeholder="请输入验证码" />
           </Form.Item>
         </div>
@@ -120,7 +125,8 @@ const Login = memo(() => {
           <Form.Item
             valuePropName="checked"
             layout="horizontal"
-            name="remember">
+            name="remember"
+          >
             <Checkbox>记住密码</Checkbox>
           </Form.Item>
           <div
@@ -129,8 +135,9 @@ const Login = memo(() => {
               zIndex: 1,
               right: '20px',
               top: '18px',
-              color: '#f7d30d'
-            }}>
+              color: '#f7d30d',
+            }}
+          >
             <span onClick={() => navigate('/register')}>去注册</span>
           </div>
         </div>

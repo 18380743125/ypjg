@@ -1,4 +1,4 @@
-import request from '@/api/request'
+import yRequest from '..'
 
 interface IQueryParams {
   name?: string
@@ -6,9 +6,10 @@ interface IQueryParams {
   currentPage: number
   pageSize: number
 }
+
 // 查询水果
 export function getFruits(params: IQueryParams) {
-  return request({
+  return yRequest.get({
     url: '/api/fruits',
     params,
   })

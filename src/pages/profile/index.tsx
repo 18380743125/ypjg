@@ -13,7 +13,7 @@ import {
 } from 'antd-mobile'
 import { SetOutline } from 'antd-mobile-icons'
 import YPNavBar from '@/components/nav-bar'
-import { getUser, logout, updatePwd } from '@/api/base'
+import { getUser, logout, updatePwd } from '@/service/modules/user'
 import { removeItem } from '@/utils'
 import './index.less'
 import EditProfile from '@/components/model/edit-profile'

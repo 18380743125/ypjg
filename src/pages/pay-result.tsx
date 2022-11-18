@@ -3,7 +3,7 @@ import { Result, Button } from 'antd-mobile'
 import { useNavigate } from 'react-router-dom'
 import YPNavBar from '@/components/nav-bar'
 import { getItem } from '@/utils'
-import { queryPayResult } from '@/api/order'
+import { queryPayResult } from '@/service/modules/order'
 
 const out_trade_no = getItem('out_trade_no')
 

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Form, Button, Input, Toast } from 'antd-mobile'
 
 import YPNavBar from '@/components/nav-bar'
-import { register } from '@/api/base'
+import { register } from '@/service/modules/user'
 import './index.less'
 
 const Register = memo(() => {
@@ -53,14 +53,16 @@ const Register = memo(() => {
           <Button block type="submit" color="primary" size="large">
             注册
           </Button>
-        }>
+        }
+      >
         <Form.Item
           name="uname"
           label="用户名"
           rules={[
             { required: true, message: '用户名不能为空' },
             { max: 20, message: '用户名不能超过20个字符' },
-          ]}>
+          ]}
+        >
           <Input placeholder="请输入用户名" clearable />
         </Form.Item>
         <Form.Item
@@ -69,7 +71,8 @@ const Register = memo(() => {
           rules={[
             { required: true, message: '密码不能为空' },
             { min: 6, max: 18, message: '密码长度在6~18个字符之间' },
-          ]}>
+          ]}
+        >
           <Input
             autoComplete=""
             type="password"
@@ -83,7 +86,8 @@ const Register = memo(() => {
           rules={[
             { required: true, message: '密码不能为空' },
             { min: 6, max: 18, message: '密码长度在6~18个字符之间' },
-          ]}>
+          ]}
+        >
           <Input
             autoComplete=""
             type="password"
@@ -99,7 +103,8 @@ const Register = memo(() => {
               zIndex: 1,
               right: '20px',
               top: '14px',
-            }}>
+            }}
+          >
             <img
               ref={captchaRef}
               onClick={switchCaptcha}
@@ -116,7 +121,8 @@ const Register = memo(() => {
           rules={[
             { required: true, message: '验证码不能为空' },
             { max: 4, message: '验证码不能超过4位' },
-          ]}>
+          ]}
+        >
           <Input placeholder="请输入验证码" />
         </Form.Item>
       </Form>

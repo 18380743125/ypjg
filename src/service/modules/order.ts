@@ -1,21 +1,20 @@
-import request from "./request";
+import yRequest from '..'
 
 // 下单
 export function handleOrder(goods: any, money: string) {
-  return request({
+  return yRequest.post({
     url: '/api/order',
-    method: 'POST',
     data: {
       orders: goods,
-      money
-    }
+      money,
+    },
   })
 }
 
 // 查询支付结果
 export function queryPayResult(out_trade_no: string) {
-  return request({
+  return yRequest.get({
     url: '/api/order/queryPayResult',
-    params: { out_trade_no }
+    params: { out_trade_no },
   })
 }

@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx'
-import { save, getCarts } from '@/api/cart'
+import { save, getCarts } from '@/service/modules/cart'
 
 class CartStore {
   public carts: Array<Record<string, any>> = []

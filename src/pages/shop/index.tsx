@@ -13,8 +13,8 @@ import {
 
 import YPNavBar from '@/components/nav-bar'
 import CartMini from '@/components/cart-mini'
-import { getCates } from '@/api/fruit-cate'
-import { getFruits } from '@/api/fruit'
+import { getCates } from '@/service/modules/fruit-cate'
+import { getFruits } from '@/service/modules/fruit'
 import { useStore } from '@/store'
 import './index.less'
 

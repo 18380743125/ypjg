@@ -1,1 +1,1 @@
-export const UPLOAD_ADDRESS = 'localhost:9090/uploads'
+export const UPLOAD_ADDRESS = 'localhost:9090/resourse'
